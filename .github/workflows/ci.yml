@@ -39,6 +39,9 @@ jobs:
       - name: "Run Build"
         run: pnpm run build
 
+      - name: Install release-please
+        run: npm install -g release-please        
+
       - name: Run release-please
         run: release-please release --token=${{ secrets.GITHUB_TOKEN }}        
 
