@@ -43,7 +43,7 @@ jobs:
         run: npm install -g release-please        
 
       - name: Run release-please
-        run: release-please release --token=${{ secrets.GITHUB_TOKEN }}        
+        run: release-please github-release --token=${{ secrets.GITHUB_TOKEN }}        
 
       - name: Upload Release Artifact
         if: ${{ steps.release.outputs.release_created }}
